@@ -5,7 +5,8 @@ const restifyBunyanLogger = require('restify-bunyan-logger');
 const constants = require('./src/API/constants');
 const name = 'picklerick';
 const log = new Logger({name});
-const db = require('./src/API/db');
+require('./src/API/db');
+const PORT = process.env.PORT || constants.PORT;
 
 const server = restify.createServer({name, log});
 server.on('after', restifyBunyanLogger());
@@ -31,6 +32,6 @@ server.pre(function (req, res, next) {
 // Applying JWT here protects all routes except the token path
 server.use(rest_jwt({secret: constants.SECRET}).unless({path: ['/token']}));
 
-server.listen(constants.PORT, () => {
+server.listen(PORT, () => {
   console.info(`${server.name} listening at: ${server.url}`);
 });

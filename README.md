@@ -1,5 +1,7 @@
 node-boot-camp 
 
+REQUIRES an environment variable MONGODB_CONNECTION - which points to your mongodb.
+
 This app demonstrates using restify to create a microservice RESTful API in Node.js. 
 * The API use webtokens to secure
 * Shows how to decompose node apps using modules
