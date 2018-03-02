@@ -1,0 +1,27 @@
+{
+  "name": "node-boot-camp",
+  "version": "1.0.0",
+  "description": "from the TekAdept node boot camp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/Rockncoder/node-boot-camp.git"
+  },
+  "author": "Troy Miles",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "delivery": "0.0.6",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.7",
+    "mongoose-findorcreate": "^2.0.0",
+    "node-fetch": "^1.7.3",
+    "restify": "^6.3.2",
+    "restify-bunyan-logger": "^2.0.7",
+    "restify-jwt-community": "^0.5.4",
+    "socket.io": "^2.0.4"
+  }
+}
